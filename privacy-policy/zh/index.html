@@ -13,6 +13,7 @@
       color: #222;
       background-color: #fff;
     }
+
     h1, h2 {
       color: #333;
     }
@@ -43,6 +44,40 @@
   </style>
 </head>
 <body>
+  <div class="lang-switch">
+  <label for="lang" class="sr-only">Language</label>
+  <select id="lang" aria-label="Language">
+    <option value="/privacy-policy/">English</option>
+    <option value="/privacy-policy/zh/">中文 (Chinese)</option>
+  </select>
+</div>
+
+<style>
+  .lang-switch {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>
+
+<script>
+  const select = document.getElementById('lang');
+  // Auto-select current page language
+  const path = location.pathname.replace(/\/+$/, '') + '/';
+  for (let i = 0; i < select.options.length; i++) {
+    if (select.options[i].value === path) select.selectedIndex = i;
+  }
+  // Navigate when user changes
+  select.addEventListener('change', e => {
+    window.location.href = e.target.value;
+  });
+</script>
+  
   <h1>隐私政策</h1>
   <p><strong>应用名称：</strong> Neuron – Battery Monitor<br>
      <strong>开发者：</strong> Neuron Innovations<br>

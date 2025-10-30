@@ -1,166 +1,135 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Brainy Quiz Zone</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      padding: 0 20px;
-      max-width: 900px;
-      line-height: 1.6;
-      color: #222;
-      background-color: #fff;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 30px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-    }
-    p, li {
-      font-size: 15px;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    a {
-      color: #0077cc;
-    }
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Privacy Policy — Brainy – Quiz Zone</title>
+<style>
+  :root{--fg:#111;--muted:#5b5b5b}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);line-height:1.6;margin:0;padding:24px;max-width:900px}
+  h1,h2,h3{line-height:1.25;margin:1.2em 0 .4em}
+  p,li{margin:.5em 0}
+  .meta{color:var(--muted)}
+  code{background:#f6f8fa;padding:2px 4px;border-radius:4px}
+  ul{padding-left:1.25rem}
+  hr{border:none;border-top:1px solid #eee;margin:2rem 0}
+  a{color:#0b57d0}
+</style>
 </head>
 <body>
-  <div class="lang-switch">
-  <label for="lang" class="sr-only">Language</label>
-  <select id="lang" aria-label="Language">
-    <option value="/quiz-zone/privacy-policy/">English</option>
-    <!-- <option value="/quiz-zone/privacy-policy/zh/">中文 (Chinese)</option> -->
-  </select>
-</div>
+<h1>Privacy Policy</h1>
+<p class="meta">Last Updated: October 30, 2025</p>
 
-<style>
-  .lang-switch {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 999;
-  }
-  .sr-only {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-  }
-</style>
+<p>This Privacy Policy explains how <strong>Neuron Innovations</strong> (“<strong>we</strong>”, “<strong>us</strong>”) collects, uses, and shares information when you use <strong>Brainy – Quiz Zone</strong> and any related websites or applications that link to this policy (collectively, the “<strong>Services</strong>”).</p>
 
-<script>
-  const select = document.getElementById('lang');
-  // Auto-select current page language
-  const path = location.pathname.replace(/\/+$/, '') + '/';
-  for (let i = 0; i < select.options.length; i++) {
-    if (select.options[i].value === path) select.selectedIndex = i;
-  }
-  // Navigate when user changes
-  select.addEventListener('change', e => {
-    window.location.href = e.target.value;
-  });
-</script>
+<h2>Overview</h2>
+<ul>
+  <li><strong>Monetization:</strong> Google Ads (AdMob) and in-app purchases (e.g., Coins, Ad-Free).</li>
+  <li><strong>Accounts/Social:</strong> Google Play Games Sign-In for leaderboards and achievements.</li>
+  <li><strong>Analytics/Crash:</strong> We do not use third-party analytics or crash reporting SDKs.</li>
+  <li><strong>Gameplay logs:</strong> We do not store or share gameplay logs on our own servers.</li>
+  <li><strong>Permissions:</strong> Internet; optional notifications (Android 13+). No location or contacts.</li>
+  <li><strong>Audience:</strong> General audiences, including children (age 3+), worldwide.</li>
+</ul>
 
-  <h1>Privacy Policy</h1>
-  <p><strong>App Name:</strong> Brainy – Quiz Zone<br>
-     <strong>Developer:</strong> Maria Kishor Eugin<br>
-     <strong>Effective Date:</strong> October 30, 2025<br>
-     <strong>Privacy Policy URL:</strong> 
-     <a href="https://www.neuroninnovations.in/quiz-zone/privacy-policy/" target="_blank">
-       https://www.neuroninnovations.in/quiz-zone/privacy-policy/
-     </a>
-  </p>
+<h2>What We Collect & Why</h2>
+<p>We aim to minimize personal data. Most data we process does not directly identify you but may identify your device. Where laws treat such data as personal, we handle it accordingly.</p>
 
-  <h2>1. Introduction</h2>
-  <p>
-    This Privacy Policy describes how Neuron Innovations (“we”, “our”, “us”) handles information when you use the
-    mobile application Neuron – Battery Monitor (“the App”). We operate the App and are responsible for its processing
-    of any user data. You are advised to read this policy carefully before using the App.
-  </p>
+<h3>1) Information you provide directly</h3>
+<ul>
+  <li><strong>Support:</strong> If you email us, we process your email address and the content to respond and improve the Services.</li>
+</ul>
 
-  <h2>2. What Information We Collect</h2>
-  <h3>2.1 Device & Battery-Related Data</h3>
-  <ul>
-    <li>The App collects battery status information (such as power level, charging state, battery health, voltage, temperature) from your device’s operating system.</li>
-    <li>This information is processed entirely on your device and is not transmitted, stored or shared externally.</li>
-  </ul>
-  <h3>2.2 No Personal Identifiers</h3>
-  <ul>
-    <li>We do not collect personally identifiable information (name, email, phone number, device identifier, location) unless you voluntarily provide it (which this App does not ask).</li>
-    <li>We do not use analytics or tracking services that collect personal data or user behaviour.</li>
-  </ul>
+<h3>2) Information we collect automatically</h3>
+<ul>
+  <li><strong>Device & basic app data:</strong> Device model, OS version, language, app version, and basic technical events necessary to run the app, prevent abuse, and keep features working (e.g., purchase validation, ad delivery/frequency capping for eligible users).</li>
+  <li><strong>Advertising identifiers (adults/teen users only):</strong> Google Advertising ID (AAID) may be used by AdMob to show and measure ads and prevent fraud. For child users (see “Children’s Privacy”), we request <em>non-personalized ads</em> and apply Google’s child-directed settings so ad identifiers are not used for personalized profiling.</li>
+  <li><strong>Purchases:</strong> From Google Play we receive <em>non-financial</em> purchase confirmations (product IDs, timestamps) so we can deliver items like Coins or Ad-Free. We do <em>not</em> receive payment card details.</li>
+</ul>
 
-  <h2>3. How We Use Your Information</h2>
-  <ul>
-    <li>Since data remains local on your device, we use the battery-related information solely to display current device battery conditions and statistics.</li>
-    <li>There is no sharing of data with third parties.</li>
-    <li>There is no sale of your data.</li>
-    <li>We do not feature personalized advertising or marketing, and no consent is required for that.</li>
-    <li>If you uninstall the App, all collected data (which is local only) is removed from your device in accordance with device behaviour.</li>
-  </ul>
+<h3>3) Information from third parties you choose to link</h3>
+<ul>
+  <li><strong>Google Play Games:</strong> If you sign in, Google provides your gamer profile (e.g., gamer tag, avatar, and a unique ID) so we can show leaderboards and award achievements. Your leaderboard scores/achievements are stored and processed by Google Play Games Services; we do not host your gamer profile or gameplay logs on our own servers.</li>
+</ul>
 
-  <h2>4. Permissions & Third-Party Code</h2>
-  <ul>
-    <li>The App may request system permissions (for example to access battery status). These are used only for the core function of monitoring battery status and do not result in data being collected or sent off device.</li>
-    <li>We do not embed third-party SDKs that collect personal data.</li>
-    <li>If future versions include crash-reporting or analytics SDKs, this policy will be updated accordingly and you will be informed.</li>
-  </ul>
+<h2>Legal Bases (where applicable)</h2>
+<p>We process data based on: (i) <strong>consent</strong> (e.g., for personalized ads where required); (ii) <strong>contract necessity</strong> (to provide the game and purchases); (iii) <strong>legitimate interests</strong> (security, anti-fraud, service improvement); and (iv) <strong>legal obligations</strong>.</p>
 
-  <h2>5. Your Rights</h2>
-  <ul>
-    <li>You may uninstall the App at any time, which terminates any processing.</li>
-    <li>You may revoke any permissions at any time via your device settings.</li>
-    <li>If you believe we have collected personal data (which we have not), you may contact us at the details below to request deletion or access.</li>
-    <li>Please note: As the App does not collect or transmit personal data, many typical rights (such as portability or objection) are not applicable, but you still may contact us.</li>
-  </ul>
+<h2>Children’s Privacy</h2>
+<p>The Services are intended for general audiences, including children. We apply the following safeguards:</p>
+<ul>
+  <li><strong>Ads for child users:</strong> We request <em>non-personalized ads</em> and apply Google’s child-directed treatment so ads are contextual and not based on behavioral profiles.</li>
+  <li><strong>Accounts & social:</strong> Features requiring Google Play Games sign-in are intended for users who meet the minimum age required by Google and local law. Child users may play without sign-in; leaderboard/achievement features may be unavailable to them.</li>
+  <li><strong>No direct contact data from children:</strong> We do not knowingly collect children’s contact details. If you believe a child provided personal data, contact us and we will delete it promptly.</li>
+</ul>
+<p>Age thresholds vary by region (e.g., under 13 in the U.S., under 16 in much of the EEA unless local law sets a different age, under 14 in South Korea).</p>
 
-  <h2>6. Consent & Withdrawal</h2>
-  <ul>
-    <li>By installing or using the App, you consent to this Privacy Policy and to any data processing described herein.</li>
-    <li>If you withdraw consent (for example by uninstalling the App or revoking permissions), our processing stops.</li>
-    <li>If you continue using the App after changes to this policy, you consent to those changes.</li>
-  </ul>
+<h2>In-App Purchases</h2>
+<p>Purchases are processed by the app store. We receive only what’s necessary to grant items (product ID, time, and a store token/receipt). We do not receive your billing details.</p>
 
-  <h2>7. Data Minimisation & Security</h2>
-  <ul>
-    <li>We adhere to the principle of collecting only what is necessary for the core function (battery monitoring).</li>
-    <li>We do not collect data beyond that purpose, and no hidden collection occurs.</li>
-    <li>Since no data leaves your device, the risk of unauthorized access or transmission is effectively mitigated.</li>
-    <li>We do not sell or share your personal or device data with any third parties.</li>
-  </ul>
+<h2>Ads (Google AdMob)</h2>
+<ul>
+  <li>For eligible non-child users, AdMob may use the device’s advertising ID to deliver, cap frequency, and measure ads, and for fraud prevention.</li>
+  <li>For child users, we request non-personalized ads and apply child-directed flags. Ads are contextual and not based on behavioral profiles.</li>
+  <li>You can manage ad preferences on Android: <em>Settings → Google → Ads → Opt out of Ads Personalization</em>.</li>
+</ul>
 
-  <h2>8. Updates to This Policy</h2>
-  <ul>
-    <li>We may update this Privacy Policy from time to time (due to new features, regulations or legal obligations).</li>
-    <li>We will update the “Effective Date” at the top of the policy when we do so.</li>
-    <li>We will publish the new version at the same URL and highlight any major changes within the App if needed.</li>
-  </ul>
+<h2>Permissions We Use</h2>
+<ul>
+  <li><strong>INTERNET:</strong> Required to connect to the app store, ads, and Google Play Games.</li>
+  <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Optional. We may send gameplay reminders or updates if you allow notifications in your device settings. You can turn notifications off at any time in system settings.</li>
+</ul>
 
-  <h2>9. Contact Us</h2>
-  <p>
-    If you have any questions, requests or feedback about this Privacy Policy, please contact:<br><br>
-    📧 <a href="mailto:neuroninnovations@gmail.com">neuroninnovations@gmail.com</a><br>
-    <em>(We aim to respond within 30 calendar days.)</em>
-  </p>
+<h2>Retention</h2>
+<ul>
+  <li><strong>User-controlled:</strong> You can stop using the app at any time; if you signed in with Google Play Games, you can manage/delete your Play Games profile and related data via your Google account.</li>
+  <li><strong>Time-limited:</strong> We do <em>not</em> keep gameplay logs on our own servers. Support emails you send us may be retained as needed to resolve your request and for record-keeping, then deleted or anonymized.</li>
+  <li><strong>Extended retention:</strong> Minimal records may be retained as needed for anti-fraud, security, dispute handling, and legal compliance.</li>
+</ul>
 
-  <footer>
-    &copy; 2025 Neuron Innovations. All rights reserved.
-  </footer>
+<h2>Your Choices & Rights</h2>
+<ul>
+  <li><strong>Ads:</strong> Manage ad personalization in your device settings (Android path above). Child users receive only non-personalized ads.</li>
+  <li><strong>Notifications:</strong> Control in your device settings.</li>
+  <li><strong>Access/Deletion/Correction:</strong> If you signed in with Google Play Games, manage your profile and game data via your Google account. For any data we hold directly (e.g., support emails), contact us at <a href="mailto:neuroninnovations@gmail.com">neuroninnovations@gmail.com</a>.</li>
+  <li><strong>Consent:</strong> Where we rely on consent, you can withdraw it (for example, by turning off personalized ads in your device settings).</li>
+  <li><strong>Complaints:</strong> You may have the right to complain to a supervisory authority in your region.</li>
+</ul>
+
+<h2>International Transfers</h2>
+<p>We may process data in countries outside your own. Where EEA/UK data is transferred internationally, we use appropriate safeguards (e.g., Standard Contractual Clauses) as required by law.</p>
+
+<h2>Sharing</h2>
+<p>We do <strong>not</strong> sell personal data. We share only with:</p>
+<ul>
+  <li><strong>Service providers:</strong> e.g., Google (Play Store, Play Games, AdMob) to operate core features; these parties process data under their policies and our instructions where applicable.</li>
+  <li><strong>Legal/compliance:</strong> Where required by law or to protect users and our rights, or in connection with a merger/acquisition.</li>
+</ul>
+
+<h2>Security</h2>
+<p>We implement reasonable technical and organizational measures (e.g., encryption in transit, access controls) to protect data. No method is 100% secure; please keep your device and accounts secure.</p>
+
+<h2>Third-Party Services</h2>
+<p>The Services integrate Google Play Games and Google Ads (AdMob). Their processing is governed by their own privacy policies. We recommend reviewing those policies.</p>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this policy. We will update the “Last Updated” date and, where required, provide additional notice.</p>
+
+<h2>Contact Us</h2>
+<p><strong>Neuron Innovations</strong> is the data controller.</p>
+<ul>
+  <li>Email: <a href="mailto:neuroninnovations@gmail.com">neuroninnovations@gmail.com</a></li>
+</ul>
+
+<hr />
+
+<h2>California (CCPA/CPRA)</h2>
+<p>California residents may have rights to know, access, delete, correct, and opt-out of “sale”/“sharing”. We do not sell personal data. To make a request regarding data we hold (e.g., support emails), email <a href="mailto:neuroninnovations@gmail.com">neuroninnovations@gmail.com</a>. For Play Games data, use your Google account settings. For ads, use device settings noted above.</p>
+
+<h2>U.S. State Privacy Rights (CO, CT, UT, VA, NV)</h2>
+<p>Residents may have rights to access, correct, delete, portability, and opt-out of targeted advertising/sale/profiling. Use your device settings for ads and your Google account for Play Games data; or email us for data we hold directly.</p>
+
+<h2>EEA/UK</h2>
+<p>Legal bases are as described above. You may contact your local supervisory authority and exercise rights via the methods listed in “Your Choices & Rights”. International transfers use appropriate safeguards.</p>
+
 </body>
 </html>

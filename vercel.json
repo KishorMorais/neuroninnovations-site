@@ -7,6 +7,18 @@
     {
       "source": "/portfolio/kishoreugin/:path*",
       "destination": "https://portfolio-one-self-19.vercel.app/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://portfolio-one-self-19.vercel.app/_next/:path*"
+    },
+    {
+      "source": "/kishor-profile.jpeg",
+      "destination": "https://portfolio-one-self-19.vercel.app/kishor-profile.jpeg"
+    },
+    {
+      "source": "/Kishor-CV.pdf",
+      "destination": "https://portfolio-one-self-19.vercel.app/Kishor-CV.pdf"
     }
   ]
 }

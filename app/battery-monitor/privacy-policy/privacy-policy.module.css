@@ -1,0 +1,440 @@
+.page {
+  min-height: 100vh;
+  padding: 32px 20px 70px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(93, 91, 255, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 186, 255, 0.08),
+      transparent 28%
+    ),
+    #07090d;
+
+  color: #e9edf5;
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------
+   TOP BAR
+--------------------------------------- */
+
+.topBar {
+  width: min(980px, 100%);
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brandName {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.brandProduct {
+  font-size: 12px;
+  color: #7f8795;
+}
+
+/* ---------------------------------------
+   LANGUAGE SWITCHER
+--------------------------------------- */
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 4px;
+
+  border: 1px solid #272c36;
+  border-radius: 12px;
+
+  background: rgba(15, 18, 24, 0.9);
+}
+
+.languageOption,
+.languageActive {
+  display: block;
+
+  padding: 8px 13px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.languageOption {
+  color: #7f8795;
+}
+
+.languageOption:hover {
+  color: #ffffff;
+  background: #151922;
+}
+
+.languageActive {
+  color: #ffffff;
+  background: #202630;
+}
+
+/* ---------------------------------------
+   HERO
+--------------------------------------- */
+
+.hero {
+  width: min(980px, 100%);
+  margin: 0 auto;
+
+  padding: 55px 55px 40px;
+
+  border: 1px solid #212630;
+  border-bottom: 0;
+
+  border-radius: 26px 26px 0 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0)
+    ),
+    #0d1016;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+
+  color: #8999ff;
+}
+
+.title {
+  margin: 0;
+
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+
+  color: #ffffff;
+}
+
+.subtitle {
+  max-width: 650px;
+
+  margin: 16px 0 0;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #979fab;
+}
+
+/* ---------------------------------------
+   APP / DEVELOPER / EFFECTIVE DATE
+--------------------------------------- */
+
+.metaGrid {
+  width: min(980px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-left: 1px solid #212630;
+  border-right: 1px solid #212630;
+  border-top: 1px solid #212630;
+  border-bottom: 1px solid #212630;
+
+  background: #0d1016;
+}
+
+/*
+ First and last cells use the same outer
+ 55px spacing as the hero and policy body.
+*/
+
+.metaItem {
+  min-width: 0;
+  min-height: 88px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 20px 28px;
+}
+
+.metaItem:first-child {
+  padding-left: 55px;
+}
+
+.metaItem:last-child {
+  padding-right: 55px;
+}
+
+.metaItem + .metaItem {
+  border-left: 1px solid #212630;
+}
+
+.metaLabel {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #656d7a;
+}
+
+.metaValue {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #d8dde6;
+
+  overflow-wrap: anywhere;
+}
+
+/* ---------------------------------------
+   POLICY CONTENT
+--------------------------------------- */
+
+.content {
+  width: min(980px, 100%);
+  margin: 0 auto;
+
+  padding: 30px 55px 55px;
+
+  border: 1px solid #212630;
+  border-top: 0;
+
+  border-radius: 0 0 26px 26px;
+
+  background: #0d1016;
+}
+
+.section {
+  padding: 31px 0;
+
+  border-bottom: 1px solid #1d222b;
+}
+
+.section:last-child {
+  border-bottom: 0;
+}
+
+.section h2 {
+  margin: 0 0 17px;
+
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+
+  color: #ffffff;
+}
+
+.section h3 {
+  margin: 25px 0 10px;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: #d9deea;
+}
+
+.section p,
+.section li {
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #aeb5c0;
+}
+
+.section p {
+  margin: 0;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 21px;
+}
+
+.section li + li {
+  margin-top: 9px;
+}
+
+.link {
+  color: #9eacff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------
+   CONTACT
+--------------------------------------- */
+
+.contactBox {
+  margin-top: 18px;
+  padding: 18px 20px;
+
+  border: 1px solid #262d39;
+  border-radius: 14px;
+
+  background: #11151c;
+}
+
+.contactBox p {
+  margin-top: 8px;
+}
+
+/* ---------------------------------------
+   FOOTER
+--------------------------------------- */
+
+.footer {
+  width: min(980px, 100%);
+
+  margin: 30px auto 0;
+
+  text-align: center;
+
+  font-size: 12px;
+  color: #646c79;
+}
+
+/* ---------------------------------------
+   TABLET
+--------------------------------------- */
+
+@media (max-width: 800px) {
+  .hero {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .content {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .metaItem {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .metaItem:first-child {
+    padding-left: 36px;
+  }
+
+  .metaItem:last-child {
+    padding-right: 36px;
+  }
+}
+
+/* ---------------------------------------
+   MOBILE
+--------------------------------------- */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 18px 14px 50px;
+  }
+
+  .topBar {
+    margin-bottom: 18px;
+
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .brandProduct {
+    max-width: 150px;
+  }
+
+  .languageOption,
+  .languageActive {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 38px 24px 28px;
+
+    border-radius: 20px 20px 0 0;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metaItem,
+  .metaItem:first-child,
+  .metaItem:last-child {
+    min-height: auto;
+
+    padding: 17px 24px;
+  }
+
+  .metaItem + .metaItem {
+    border-left: 0;
+    border-top: 1px solid #212630;
+  }
+
+  .content {
+    padding: 14px 24px 35px;
+
+    border-radius: 0 0 20px 20px;
+  }
+
+  .section {
+    padding: 27px 0;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,3595 @@
+.kishor-portfolio {
+  --bg: #f7f6f1;
+  --surface: #ffffff;
+  --surface-soft: #efeee8;
+
+  --ink: #141713;
+  --muted: #62675f;
+
+  --line: #d9dbd3;
+  --line-strong: #bfc9c1;
+
+  --accent: #275b49;
+  --accent-strong: #174635;
+  --accent-soft: #dfe9e3;
+
+  --visual-grey: #f2f2ed;
+  --visual-green: #e6ede8;
+  --visual-green-soft: #d8e6dd;
+
+  --max: 1180px;
+}
+
+.kishor-portfolio {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.kishor-portfolio * {
+  box-sizing: border-box;
+}
+
+.kishor-portfolio {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+.kishor-portfolio {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kishor-portfolio a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.kishor-portfolio button,
+.kishor-portfolio input,
+.kishor-portfolio textarea {
+  font: inherit;
+}
+
+.kishor-portfolio ::selection {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* =========================================================
+   GLOBAL LAYOUT
+   ========================================================= */
+
+.kishor-portfolio .section-shell {
+  width: min(calc(100% - 48px), var(--max));
+  margin-inline: auto;
+}
+
+.kishor-portfolio .content-section {
+  padding-block: 128px;
+}
+
+.kishor-portfolio .section-tint {
+  width: 100%;
+  max-width: none;
+
+  padding-inline:
+    max(24px, calc((100vw - var(--max)) / 2));
+
+  background: var(--surface-soft);
+  border-block: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.kishor-portfolio .eyebrow {
+  margin: 0;
+
+  color: var(--accent);
+
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.kishor-portfolio .section-heading {
+  margin-bottom: 72px;
+}
+
+.kishor-portfolio .heading-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 56px;
+
+  align-items: end;
+
+  margin-top: 20px;
+}
+
+.kishor-portfolio .heading-grid h2 {
+  margin: 0;
+  max-width: 780px;
+
+  font-size: clamp(2.6rem, 5.4vw, 5.5rem);
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+  font-weight: 650;
+}
+
+.kishor-portfolio .heading-grid > p {
+  margin: 0 0 6px;
+
+  max-width: 520px;
+
+  color: var(--muted);
+
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+   ========================================================= */
+
+.kishor-portfolio .mobile-header {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 50;
+
+  height: 72px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--bg) 92%,
+      transparent
+    );
+
+  border-bottom:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--line) 84%,
+      transparent
+    );
+
+  backdrop-filter: blur(16px);
+}
+
+.kishor-portfolio .brand {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 0.86rem;
+  font-weight: 750;
+
+  letter-spacing: 0.01em;
+}
+
+.kishor-portfolio .brand-mark {
+  display: inline-grid;
+  place-items: center;
+
+  width: 34px;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: var(--ink);
+  color: white;
+
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.kishor-portfolio .menu-button {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-content: center;
+
+  gap: 5px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.kishor-portfolio .menu-button span {
+  display: block;
+
+  width: 22px;
+  height: 1.5px;
+
+  background: var(--ink);
+
+  transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.kishor-portfolio .desktop-nav {
+  position: fixed;
+
+  right: 24px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 40;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.kishor-portfolio .desktop-nav a {
+  height: 44px;
+  min-width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-radius: 24px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--line);
+
+  box-shadow:
+    0 8px 30px
+    rgba(20, 23, 19, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kishor-portfolio .desktop-nav a:hover,
+.kishor-portfolio .desktop-nav a.active {
+  background: var(--accent);
+  color: white;
+
+  border-color: var(--accent);
+
+  transform: translateX(-3px);
+}
+
+.kishor-portfolio .nav-index {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  flex: 0 0 42px;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.kishor-portfolio .nav-label {
+  width: 0;
+
+  opacity: 0;
+
+  white-space: nowrap;
+
+  font-size: 0.78rem;
+  font-weight: 750;
+
+  transition:
+    width 0.25s ease,
+    opacity 0.2s ease,
+    padding 0.25s ease;
+}
+
+.kishor-portfolio .desktop-nav a:hover .nav-label,
+.kishor-portfolio .desktop-nav a:focus-visible .nav-label {
+  width: 84px;
+
+  opacity: 1;
+
+  padding-right: 17px;
+}
+
+.kishor-portfolio .mobile-drawer {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.kishor-portfolio .hero {
+  min-height: 100svh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, 0.88fr)
+    minmax(460px, 1.12fr);
+
+  gap: clamp(56px, 8vw, 120px);
+
+  align-items: center;
+
+  padding-block: 48px;
+
+  position: relative;
+}
+
+.kishor-portfolio .hero-art {
+  min-width: 0;
+}
+
+.kishor-portfolio .portrait-frame {
+  position: relative;
+
+  min-height: min(78svh, 760px);
+
+  overflow: hidden;
+
+  border-radius:
+    8px 56px 8px 8px;
+
+  background: var(--accent-soft);
+
+  border:
+    1px solid
+    #d2d9d3;
+}
+
+.kishor-portfolio .portrait-frame::before {
+  content: "";
+
+  position: absolute;
+
+  left: -23%;
+  bottom: -24%;
+
+  width: 84%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  opacity: 0.96;
+}
+
+.kishor-portfolio .portrait-frame::after {
+  content: "";
+
+  position: absolute;
+
+  right: -24%;
+  top: -17%;
+
+  width: 66%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(39, 91, 73, 0.22);
+}
+
+.kishor-portfolio .portrait-photo {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 28%;
+
+  z-index: 1;
+}
+
+.kishor-portfolio .portrait-grid {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  opacity: 0.34;
+
+  background-image:
+    linear-gradient(
+      rgba(39, 91, 73, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 91, 73, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    42px 42px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 82%
+    );
+
+  pointer-events: none;
+}
+
+.kishor-portfolio .portrait-monogram {
+  position: absolute;
+
+  left: 50%;
+  top: 46%;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  width:
+    clamp(
+      180px,
+      20vw,
+      260px
+    );
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: var(--surface);
+
+  border:
+    1px solid
+    rgba(20, 23, 19, 0.1);
+
+  box-shadow:
+    0 30px 90px
+    rgba(23, 70, 53, 0.14);
+
+  font-size:
+    clamp(
+      4rem,
+      7vw,
+      7rem
+    );
+
+  letter-spacing: -0.08em;
+  font-weight: 650;
+
+  color: var(--accent-strong);
+}
+
+.kishor-portfolio .portrait-caption {
+  position: absolute;
+
+  left: 26px;
+  right: 26px;
+  bottom: 24px;
+
+  z-index: 3;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.kishor-portfolio .hero-copy {
+  padding-right: 72px;
+}
+
+.kishor-portfolio .hero-copy h1 {
+  margin:
+    18px 0 18px;
+
+  font-size:
+    clamp(
+      4.6rem,
+      8vw,
+      8.7rem
+    );
+
+  line-height: 0.8;
+
+  letter-spacing: -0.075em;
+
+  font-weight: 650;
+}
+
+.kishor-portfolio .hero-copy h1 span {
+  color: var(--accent);
+}
+
+.kishor-portfolio .hero-role {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-size:
+    clamp(
+      1.3rem,
+      2.25vw,
+      2.05rem
+    );
+
+  line-height: 1.18;
+
+  letter-spacing: -0.035em;
+
+  font-weight: 560;
+}
+
+.kishor-portfolio .hero-intro {
+  margin:
+    26px 0 0;
+
+  max-width: 650px;
+
+  color: var(--muted);
+
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+.kishor-portfolio .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.kishor-portfolio .button {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  padding:
+    0 20px;
+
+  border-radius: 999px;
+
+  border:
+    1px solid
+    transparent;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.kishor-portfolio .button:hover {
+  transform:
+    translateY(-2px);
+}
+
+.kishor-portfolio .button-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.kishor-portfolio .button-primary:hover {
+  background:
+    var(--accent-strong);
+}
+
+.kishor-portfolio .button-secondary {
+  background:
+    var(--surface);
+
+  border-color:
+    var(--line);
+}
+
+.kishor-portfolio .button-secondary:hover {
+  border-color:
+    var(--ink);
+}
+
+.kishor-portfolio .hero-meta {
+  display: grid;
+
+  gap: 8px;
+
+  margin-top: 34px;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.kishor-portfolio .hero-meta a {
+  width: fit-content;
+
+  color: var(--ink);
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .scroll-cue {
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+}
+
+.kishor-portfolio .scroll-cue i {
+  position: relative;
+
+  display: block;
+
+  width: 1px;
+  height: 32px;
+
+  overflow: hidden;
+
+  background: var(--line);
+}
+
+.kishor-portfolio .scroll-cue i::after {
+  content: "";
+
+  position: absolute;
+
+  top: -100%;
+  left: 0;
+
+  width: 1px;
+  height: 70%;
+
+  background: var(--accent);
+
+  animation:
+    scrollLine
+    2s ease-in-out
+    infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    top: -70%;
+  }
+
+  55%,
+  100% {
+    top: 100%;
+  }
+}
+
+
+/* =========================================================
+   ABOUT / PROFILE
+   ========================================================= */
+
+.kishor-portfolio .profile-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 72px;
+
+  align-items: start;
+}
+
+.kishor-portfolio .profile-copy {
+  max-width: 650px;
+}
+
+.kishor-portfolio .profile-copy > p {
+  margin:
+    0 0 22px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+.kishor-portfolio .profile-copy .lead {
+  color: var(--ink);
+
+  font-size:
+    clamp(
+      1.3rem,
+      2.1vw,
+      1.85rem
+    );
+
+  line-height: 1.48;
+
+  letter-spacing: -0.025em;
+}
+
+.kishor-portfolio .profile-facts {
+  margin-top: 36px;
+
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .profile-facts div {
+  display: grid;
+
+  grid-template-columns:
+    120px 1fr;
+
+  gap: 20px;
+
+  padding:
+    16px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .profile-facts span {
+  color: var(--muted);
+
+  font-size: 0.76rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .profile-facts strong {
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.kishor-portfolio .stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    var(--surface);
+}
+
+.kishor-portfolio .stat {
+  min-height: 190px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right:
+    1px solid
+    var(--line);
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .stat:nth-child(2n) {
+  border-right: 0;
+}
+
+.kishor-portfolio .stat:nth-child(n + 3) {
+  border-bottom: 0;
+}
+
+.kishor-portfolio .stat strong {
+  font-size:
+    clamp(
+      2.6rem,
+      5vw,
+      4.5rem
+    );
+
+  letter-spacing: -0.07em;
+
+  color: var(--accent);
+
+  line-height: 1;
+}
+
+.kishor-portfolio .stat span {
+  max-width: 120px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   EXPERTISE
+   ========================================================= */
+
+.kishor-portfolio .expertise-block {
+  margin-top: 128px;
+}
+
+.kishor-portfolio .subheading {
+  display: grid;
+
+  grid-template-columns:
+    0.35fr 1fr;
+
+  gap: 40px;
+
+  align-items: end;
+
+  margin-bottom: 36px;
+}
+
+.kishor-portfolio .subheading h3 {
+  margin: 0;
+
+  max-width: 700px;
+
+  font-size:
+    clamp(
+      1.8rem,
+      3vw,
+      2.8rem
+    );
+
+  letter-spacing: -0.045em;
+
+  font-weight: 590;
+}
+
+.kishor-portfolio .expertise-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    var(--surface);
+}
+
+.kishor-portfolio .expertise-card {
+  min-height: 340px;
+
+  padding: 28px;
+
+  border-right:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .expertise-card:last-child {
+  border-right: 0;
+}
+
+.kishor-portfolio .expertise-card > span {
+  color: var(--accent);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.kishor-portfolio .expertise-card h4 {
+  margin:
+    44px 0 24px;
+
+  font-size: 1.18rem;
+
+  letter-spacing: -0.025em;
+}
+
+.kishor-portfolio .expertise-card ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.kishor-portfolio .expertise-card li {
+  padding:
+    8px 0;
+
+  color: var(--muted);
+
+  border-bottom:
+    1px solid
+    #ecece8;
+
+  font-size: 0.84rem;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.kishor-portfolio .timeline {
+  border-top:
+    1px solid
+    #cfd1ca;
+}
+
+.kishor-portfolio .timeline-item {
+  display: grid;
+
+  grid-template-columns:
+    0.34fr 1fr;
+
+  gap: 40px;
+
+  padding:
+    44px 0;
+
+  border-bottom:
+    1px solid
+    #cfd1ca;
+}
+
+.kishor-portfolio .timeline-period {
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+.kishor-portfolio .timeline-company {
+  margin:
+    0 0 8px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+}
+
+.kishor-portfolio .timeline-main h3 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      1.55rem,
+      2.5vw,
+      2.35rem
+    );
+
+  letter-spacing: -0.04em;
+
+  font-weight: 620;
+}
+
+.kishor-portfolio .timeline-main > p:not(.timeline-company) {
+  max-width: 800px;
+
+  margin:
+    18px 0 22px;
+
+  color: var(--muted);
+
+  line-height: 1.72;
+}
+
+.kishor-portfolio .tag-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.kishor-portfolio .tag-row span {
+  padding:
+    7px 10px;
+
+  border:
+    1px solid
+    #cfd1ca;
+
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+
+  color: #50554e;
+
+  background:
+    rgba(255, 255, 255, 0.42);
+}
+
+.kishor-portfolio .additional-experience {
+  margin-top: 84px;
+}
+
+.kishor-portfolio .additional-experience > .eyebrow {
+  margin-bottom: 16px;
+}
+
+.kishor-portfolio .compact-role {
+  display: grid;
+
+  grid-template-columns:
+    140px 0.75fr 1fr;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding:
+    16px 0;
+
+  border-bottom:
+    1px solid
+    #cfd1ca;
+
+  font-size: 0.86rem;
+}
+
+.kishor-portfolio .compact-role span,
+.kishor-portfolio .compact-role p {
+  color: var(--muted);
+}
+
+.kishor-portfolio .compact-role p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   EDUCATION & CERTIFICATIONS
+   ========================================================= */
+
+.kishor-portfolio .credentials-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 80px;
+
+  margin-top: 128px;
+}
+
+.kishor-portfolio .credential-column > .eyebrow {
+  margin-bottom: 24px;
+}
+
+.kishor-portfolio .credential {
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 18px;
+
+  padding:
+    22px 0;
+
+  border-bottom:
+    1px solid
+    #cfd1ca;
+}
+
+.kishor-portfolio .credential > span {
+  color: var(--accent);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.kishor-portfolio .credential h3 {
+  margin: 0;
+
+  font-size: 1rem;
+
+  line-height: 1.4;
+}
+
+.kishor-portfolio .credential p {
+  margin:
+    7px 0 0;
+
+  color: var(--muted);
+
+  line-height: 1.5;
+
+  font-size: 0.82rem;
+}
+
+.kishor-portfolio .credential.cert h3 {
+  font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.kishor-portfolio .projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 22px;
+}
+
+.kishor-portfolio .project-card {
+  background:
+    var(--surface);
+
+  border:
+    1px solid
+    var(--line);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.kishor-portfolio .project-card:hover {
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 28px 80px
+    rgba(20, 23, 19, 0.08);
+}
+
+.kishor-portfolio .project-visual {
+  position: relative;
+
+  height: 340px;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.kishor-portfolio .project-body {
+  padding: 30px;
+}
+
+.kishor-portfolio .project-topline {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+  font-weight: 750;
+
+  letter-spacing: 0.07em;
+}
+
+.kishor-portfolio .project-type {
+  margin:
+    36px 0 9px;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .project-body h3 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      2.6rem
+    );
+
+  letter-spacing: -0.05em;
+
+  font-weight: 630;
+}
+
+.kishor-portfolio .project-body > p:not(
+  .project-type,
+  .project-outcome
+) {
+  min-height: 86px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.kishor-portfolio .project-outcome {
+  margin:
+    24px 0 20px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   PROJECT 01 — SPACEONE TIMES
+   PALE GREEN
+   ========================================================= */
+
+.kishor-portfolio .journal-visual {
+  background:
+    var(--visual-green);
+}
+
+.kishor-portfolio .browser-top {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+  top: 14%;
+
+  height: 30px;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  border-radius:
+    8px 8px 0 0;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding:
+    0 12px;
+}
+
+.kishor-portfolio .browser-top span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #b5bdb6;
+}
+
+.kishor-portfolio .journal-brand {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top:
+    calc(14% + 30px);
+
+  background: white;
+
+  border-inline:
+    1px solid
+    var(--line-strong);
+
+  padding:
+    24px 26px 14px;
+
+  font-size: 1.1rem;
+
+  letter-spacing: -0.04em;
+}
+
+.kishor-portfolio .journal-brand b {
+  color:
+    var(--accent);
+}
+
+.kishor-portfolio .journal-lines {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top: 43%;
+
+  background: white;
+
+  border-inline:
+    1px solid
+    var(--line-strong);
+
+  padding:
+    0 26px 18px;
+
+  display: grid;
+
+  gap: 7px;
+}
+
+.kishor-portfolio .journal-lines i {
+  height: 5px;
+
+  width: 100%;
+
+  background:
+    #dce1dc;
+}
+
+.kishor-portfolio .journal-lines i:nth-child(2) {
+  width: 76%;
+}
+
+.kishor-portfolio .journal-lines i:nth-child(3) {
+  width: 54%;
+}
+
+.kishor-portfolio .journal-grid {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top: 58%;
+  bottom: 9%;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  border-top: 0;
+
+  padding:
+    8px 26px 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 0.8fr 0.8fr;
+
+  gap: 8px;
+}
+
+.kishor-portfolio .journal-grid span {
+  background:
+    var(--visual-green-soft);
+}
+
+.kishor-portfolio .journal-grid span:first-child {
+  background:
+    var(--accent);
+}
+
+
+/* =========================================================
+   PROJECT 02 — CHARGE METER
+   PALE GREY
+   ========================================================= */
+
+.kishor-portfolio .mobile-visual {
+  background:
+    var(--visual-grey);
+}
+
+.kishor-portfolio .phone-shell {
+  position: absolute;
+
+  width: 188px;
+  height: 292px;
+
+  left: 42%;
+  top: 54%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-5deg);
+
+  border:
+    7px solid
+    #1b211d;
+
+  border-radius: 30px;
+
+  background: white;
+
+  box-shadow:
+    0 28px 55px
+    rgba(20, 23, 19, 0.14);
+
+  padding:
+    38px 24px 22px;
+
+  text-align: center;
+}
+
+.kishor-portfolio .phone-speaker {
+  position: absolute;
+
+  top: 12px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 42px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: #1b211d;
+}
+
+.kishor-portfolio .phone-shell p {
+  margin:
+    10px 0 6px;
+
+  color:
+    var(--muted);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.16em;
+}
+
+.kishor-portfolio .phone-shell strong {
+  display: block;
+
+  margin:
+    12px 0;
+
+  color:
+    var(--accent);
+
+  font-size: 2.7rem;
+
+  letter-spacing: -0.08em;
+}
+
+.kishor-portfolio .battery {
+  width: 80px;
+  height: 150px;
+
+  margin:
+    0 auto 12px;
+
+  padding: 6px;
+
+  border:
+    3px solid
+    var(--ink);
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.kishor-portfolio .battery span {
+  width: 100%;
+  height: 84%;
+
+  border-radius: 5px;
+
+  background:
+    var(--accent);
+}
+
+.kishor-portfolio .phone-shell small {
+  color:
+    var(--muted);
+
+  font-size: 0.62rem;
+}
+
+.kishor-portfolio .metric-card {
+  position: absolute;
+
+  right: 10%;
+  top: 17%;
+
+  width: 138px;
+  height: 105px;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  display: grid;
+  place-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 35px
+    rgba(23, 70, 53, 0.18);
+
+  transform:
+    rotate(4deg);
+}
+
+.kishor-portfolio .metric-card span {
+  font-size: 2.2rem;
+
+  font-weight: 700;
+
+  letter-spacing: -0.07em;
+}
+
+.kishor-portfolio .metric-card small {
+  font-size: 0.66rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   PROJECT 03 — EXCHANGE RATE FORECASTING
+   PALE GREEN
+   ========================================================= */
+
+.kishor-portfolio .chart-visual {
+  padding:
+    52px 44px 24px;
+
+  background:
+    var(--visual-green);
+}
+
+.kishor-portfolio .chart-label {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  color:
+    var(--muted);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.kishor-portfolio .chart-visual svg {
+  position: absolute;
+
+  left: 6%;
+  right: 6%;
+
+  bottom: 5%;
+
+  width: 88%;
+  height: 72%;
+
+  overflow: visible;
+}
+
+.kishor-portfolio .grid-line {
+  fill: none;
+
+  stroke: #d4d6cf;
+
+  stroke-width: 1;
+}
+
+.kishor-portfolio .chart-line,
+.kishor-portfolio .chart-line-secondary {
+  fill: none;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-width: 5;
+}
+
+.kishor-portfolio .chart-line {
+  stroke:
+    var(--accent);
+}
+
+.kishor-portfolio .chart-line-secondary {
+  stroke:
+    #90968e;
+
+  stroke-width: 3;
+
+  stroke-dasharray:
+    8 10;
+}
+
+
+/* =========================================================
+   PROJECT 04 — NEGO BILL
+   PALE GREY
+   ========================================================= */
+
+.kishor-portfolio .pos-visual {
+  background:
+    var(--visual-grey);
+}
+
+.kishor-portfolio .receipt {
+  position: absolute;
+
+  left: 14%;
+  top: 13%;
+
+  width: 170px;
+  height: 255px;
+
+  background: white;
+
+  box-shadow:
+    0 18px 45px
+    rgba(20, 23, 19, 0.12);
+
+  padding: 22px;
+
+  transform:
+    rotate(-4deg);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.kishor-portfolio .receipt b {
+  font-size: 0.74rem;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .receipt span {
+  height: 6px;
+
+  background: #e5e7e2;
+}
+
+.kishor-portfolio .receipt span:nth-of-type(2) {
+  width: 82%;
+}
+
+.kishor-portfolio .receipt span:nth-of-type(3) {
+  width: 65%;
+}
+
+.kishor-portfolio .receipt em {
+  margin-top: auto;
+
+  color:
+    var(--muted);
+
+  font-size: 0.6rem;
+
+  font-style: normal;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .receipt strong {
+  color:
+    var(--accent);
+
+  font-size: 1.5rem;
+}
+
+.kishor-portfolio .pos-panel {
+  position: absolute;
+
+  right: 10%;
+  top: 24%;
+
+  width: 235px;
+  height: 178px;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  padding: 24px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(23, 70, 53, 0.2);
+
+  transform:
+    rotate(3deg);
+}
+
+.kishor-portfolio .pos-panel p {
+  margin: 0;
+
+  opacity: 0.68;
+
+  font-size: 0.68rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .pos-panel strong {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 2.2rem;
+
+  letter-spacing: -0.07em;
+}
+
+.kishor-portfolio .pos-panel div {
+  display: flex;
+
+  align-items: end;
+
+  gap: 7px;
+
+  height: 64px;
+
+  margin-top: 8px;
+}
+
+.kishor-portfolio .pos-panel i {
+  display: block;
+
+  flex: 1;
+
+  height: 45%;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+}
+
+.kishor-portfolio .pos-panel i:nth-child(2) {
+  height: 72%;
+}
+
+.kishor-portfolio .pos-panel i:nth-child(3) {
+  height: 58%;
+}
+
+.kishor-portfolio .pos-panel i:nth-child(4) {
+  height: 92%;
+}
+
+
+/* =========================================================
+   PROJECT 05 — DIGITAL MENU
+   PALE GREEN
+   ========================================================= */
+
+.kishor-portfolio .menu-visual {
+  background:
+    var(--visual-green);
+}
+
+.kishor-portfolio .menu-order-panel {
+  position: absolute;
+
+  left: 11%;
+  top: 13%;
+
+  width: 58%;
+  height: 74%;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  box-shadow:
+    0 18px 45px
+    rgba(20, 23, 19, 0.12);
+
+  padding: 22px;
+
+  transform:
+    rotate(-4deg);
+}
+
+.kishor-portfolio .menu-order-head {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  padding-bottom: 13px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  color:
+    var(--muted);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .menu-order-item {
+  display: grid;
+
+  grid-template-columns:
+    24px 1fr auto;
+
+  gap: 8px;
+
+  align-items: center;
+
+  padding:
+    12px 0;
+
+  border-bottom:
+    1px solid
+    #e5e7e2;
+
+  font-size: 0.66rem;
+}
+
+.kishor-portfolio .menu-order-item span {
+  color:
+    var(--accent);
+
+  font-weight: 800;
+}
+
+.kishor-portfolio .menu-order-item b {
+  font-weight: 650;
+}
+
+.kishor-portfolio .menu-order-item em {
+  color:
+    var(--muted);
+
+  font-style: normal;
+}
+
+.kishor-portfolio .menu-order-total {
+  display: flex;
+
+  align-items: end;
+
+  justify-content:
+    space-between;
+
+  margin-top: 14px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  font-size: 0.72rem;
+}
+
+.kishor-portfolio .menu-order-total strong {
+  color:
+    var(--accent);
+
+  font-size: 1.45rem;
+
+  letter-spacing: -0.06em;
+}
+
+.kishor-portfolio .kitchen-ticket {
+  position: absolute;
+
+  right: 10%;
+  top: 24%;
+
+  width: 178px;
+  height: 182px;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  padding: 24px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(23, 70, 53, 0.2);
+
+  transform:
+    rotate(3deg);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.kishor-portfolio .kitchen-ticket small {
+  opacity: 0.68;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.12em;
+}
+
+.kishor-portfolio .kitchen-ticket strong {
+  display: block;
+
+  margin:
+    9px 0 16px;
+
+  font-size: 2.15rem;
+
+  letter-spacing: -0.07em;
+}
+
+.kishor-portfolio .kitchen-ticket span {
+  padding:
+    5px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  font-size: 0.68rem;
+}
+
+.kishor-portfolio .kitchen-ticket em {
+  margin-top: auto;
+
+  font-size: 0.6rem;
+
+  font-style: normal;
+
+  letter-spacing: 0.1em;
+
+  opacity: 0.68;
+}
+
+
+/* =========================================================
+   PROJECT 06 — STUDIO
+   PALE GREY
+   ========================================================= */
+
+.kishor-portfolio .studio-visual {
+  background:
+    var(--visual-grey);
+}
+
+.kishor-portfolio .studio-window {
+  position: absolute;
+
+  left: 10%;
+  top: 13%;
+
+  width: 72%;
+  height: 74%;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  box-shadow:
+    0 22px 50px
+    rgba(20, 23, 19, 0.12);
+}
+
+.kishor-portfolio .studio-topbar {
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0 14px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  color:
+    var(--muted);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .studio-topbar span {
+  color:
+    var(--ink);
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.kishor-portfolio .studio-album-main {
+  position: absolute;
+
+  left: 7%;
+  right: 7%;
+
+  top: 21%;
+
+  height: 46%;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+.kishor-portfolio .studio-album-main::before {
+  content: "";
+
+  position: absolute;
+
+  inset:
+    14px 14px 42px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+}
+
+.kishor-portfolio .studio-album-main span,
+.kishor-portfolio .studio-album-main small {
+  position: relative;
+
+  z-index: 1;
+}
+
+.kishor-portfolio .studio-album-main span {
+  font-size: 0.78rem;
+
+  font-weight: 700;
+}
+
+.kishor-portfolio .studio-album-main small {
+  margin-top: 3px;
+
+  font-size: 0.6rem;
+
+  opacity: 0.72;
+}
+
+.kishor-portfolio .studio-thumbnails {
+  position: absolute;
+
+  left: 7%;
+  right: 7%;
+
+  bottom: 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.kishor-portfolio .studio-thumbnails i {
+  height: 46px;
+
+  background:
+    var(--visual-green-soft);
+}
+
+.kishor-portfolio .studio-thumbnails i:first-child {
+  background:
+    var(--accent);
+}
+
+.kishor-portfolio .studio-thumbnails i:nth-child(2) {
+  background:
+    #dce1dc;
+}
+
+.kishor-portfolio .studio-floating-card {
+  position: absolute;
+
+  right: 8%;
+  bottom: 11%;
+
+  width: 158px;
+  height: 96px;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  box-shadow:
+    0 15px 35px
+    rgba(20, 23, 19, 0.12);
+
+  padding: 16px;
+
+  transform:
+    rotate(4deg);
+}
+
+.kishor-portfolio .studio-floating-card span {
+  color:
+    var(--accent);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.kishor-portfolio .studio-floating-card strong {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 0.82rem;
+}
+
+.kishor-portfolio .studio-floating-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  color:
+    var(--muted);
+
+  font-size: 0.58rem;
+}
+
+
+/* =========================================================
+   PROJECT 07 — NETSTORE
+   PALE GREEN
+   ========================================================= */
+
+.kishor-portfolio .store-visual {
+  background:
+    var(--visual-green);
+}
+
+.kishor-portfolio .store-sidebar {
+  position: absolute;
+
+  left: 10%;
+  top: 14%;
+  bottom: 13%;
+
+  width: 52px;
+
+  background:
+    var(--accent);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding-top: 18px;
+}
+
+.kishor-portfolio .store-sidebar b {
+  color: white;
+
+  font-size: 0.8rem;
+}
+
+.kishor-portfolio .store-sidebar span {
+  width: 16px;
+  height: 3px;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+}
+
+.kishor-portfolio .store-dashboard {
+  position: absolute;
+
+  left:
+    calc(10% + 52px);
+
+  right: 23%;
+
+  top: 14%;
+  bottom: 13%;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  border-left: 0;
+
+  padding: 20px;
+}
+
+.kishor-portfolio .store-head {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+}
+
+.kishor-portfolio .store-head strong {
+  font-size: 0.8rem;
+}
+
+.kishor-portfolio .store-head span {
+  color:
+    var(--accent);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .store-stats {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 8px;
+
+  margin:
+    18px 0 14px;
+}
+
+.kishor-portfolio .store-stats div {
+  background:
+    var(--surface-soft);
+
+  padding: 12px;
+}
+
+.kishor-portfolio .store-stats small {
+  display: block;
+
+  color:
+    var(--muted);
+
+  font-size: 0.56rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .store-stats b {
+  display: block;
+
+  margin-top: 5px;
+
+  color:
+    var(--accent);
+
+  font-size: 1.35rem;
+
+  letter-spacing: -0.05em;
+}
+
+.kishor-portfolio .store-products {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.kishor-portfolio .store-products i {
+  height: 60px;
+
+  background:
+    var(--visual-green-soft);
+}
+
+.kishor-portfolio .store-products i:first-child {
+  background:
+    var(--accent);
+}
+
+.kishor-portfolio .store-products i:nth-child(2) {
+  background:
+    #dce1dc;
+}
+
+.kishor-portfolio .store-preview {
+  position: absolute;
+
+  right: 8%;
+  top: 26%;
+
+  width: 168px;
+  height: 150px;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  padding: 22px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(23, 70, 53, 0.2);
+
+  transform:
+    rotate(3deg);
+}
+
+.kishor-portfolio .store-preview small {
+  opacity: 0.68;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .store-preview strong {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 1.4rem;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.05em;
+}
+
+.kishor-portfolio .store-preview span {
+  position: absolute;
+
+  left: 22px;
+  bottom: 20px;
+
+  font-size: 0.62rem;
+
+  opacity: 0.82;
+}
+
+
+/* =========================================================
+   PROJECT 08 — NEGO CARD
+   PALE GREY
+   ========================================================= */
+
+.kishor-portfolio .card-visual {
+  background:
+    var(--visual-grey);
+}
+
+.kishor-portfolio .digital-card {
+  position: absolute;
+
+  left: 12%;
+  top: 20%;
+
+  width: 64%;
+  height: 178px;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  box-shadow:
+    0 22px 50px
+    rgba(20, 23, 19, 0.12);
+
+  padding: 24px;
+
+  transform:
+    rotate(-3deg);
+
+  display: grid;
+
+  grid-template-columns:
+    48px 1fr;
+
+  gap: 14px;
+
+  align-items: center;
+}
+
+.kishor-portfolio .digital-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 8px;
+
+  background:
+    var(--accent);
+}
+
+.kishor-portfolio .digital-card-mark {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  background:
+    var(--accent);
+
+  color: white;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+}
+
+.kishor-portfolio .digital-card strong {
+  display: block;
+
+  font-size: 0.96rem;
+}
+
+.kishor-portfolio .digital-card span {
+  display: block;
+
+  margin-top: 5px;
+
+  color:
+    var(--muted);
+
+  font-size: 0.62rem;
+}
+
+.kishor-portfolio .digital-card small {
+  grid-column:
+    1 / -1;
+
+  align-self: end;
+
+  color:
+    var(--muted);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.05em;
+}
+
+.kishor-portfolio .card-actions {
+  position: absolute;
+
+  left: 13%;
+  bottom: 13%;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.kishor-portfolio .card-actions span {
+  padding:
+    7px 10px;
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line-strong);
+
+  color:
+    var(--accent);
+
+  font-size: 0.56rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.kishor-portfolio .card-qr {
+  position: absolute;
+
+  right: 10%;
+  top: 24%;
+
+  width: 126px;
+  height: 126px;
+
+  background:
+    var(--accent);
+
+  box-shadow:
+    0 18px 45px
+    rgba(23, 70, 53, 0.18);
+
+  transform:
+    rotate(4deg);
+
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-auto-rows: 1fr;
+
+  gap: 5px;
+}
+
+.kishor-portfolio .card-qr i {
+  background: white;
+}
+
+.kishor-portfolio .card-qr i:nth-child(2),
+.kishor-portfolio .card-qr i:nth-child(4) {
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.kishor-portfolio .contact-section {
+  padding-bottom: 90px;
+}
+
+.kishor-portfolio .contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.7fr 1.3fr;
+
+  gap: 80px;
+}
+
+.kishor-portfolio .contact-details > div:not(.contact-note) {
+  padding:
+    20px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  display: grid;
+
+  gap: 7px;
+}
+
+.kishor-portfolio .contact-details span,
+.kishor-portfolio .contact-note p {
+  margin: 0;
+
+  color:
+    var(--muted);
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .contact-details a,
+.kishor-portfolio .contact-details strong {
+  font-size: 0.95rem;
+
+  font-weight: 650;
+}
+
+.kishor-portfolio .contact-details a:hover {
+  color:
+    var(--accent);
+}
+
+.kishor-portfolio .contact-note {
+  margin-top: 28px;
+
+  padding: 18px;
+
+  border:
+    1px dashed
+    var(--line);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.36
+    );
+}
+
+.kishor-portfolio .contact-note span {
+  display: block;
+
+  margin-top: 8px;
+
+  text-transform: none;
+
+  letter-spacing: 0;
+
+  line-height: 1.5;
+}
+
+.kishor-portfolio .contact-note code {
+  color:
+    var(--ink);
+}
+
+.kishor-portfolio .contact-form {
+  display: grid;
+
+  gap: 18px;
+}
+
+.kishor-portfolio .field-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 18px;
+}
+
+.kishor-portfolio .contact-form label {
+  display: grid;
+
+  gap: 8px;
+}
+
+.kishor-portfolio .contact-form label > span {
+  color:
+    var(--muted);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.kishor-portfolio .contact-form input,
+.kishor-portfolio .contact-form textarea {
+  width: 100%;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 0;
+
+  background:
+    var(--surface);
+
+  color:
+    var(--ink);
+
+  padding:
+    15px 16px;
+
+  outline: 0;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.kishor-portfolio .contact-form textarea {
+  resize: vertical;
+
+  min-height: 160px;
+}
+
+.kishor-portfolio .contact-form input:focus,
+.kishor-portfolio .contact-form textarea:focus {
+  border-color:
+    var(--accent);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(39, 91, 73, 0.09);
+}
+
+.kishor-portfolio .form-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.kishor-portfolio .form-footer .button {
+  border: 0;
+
+  cursor: pointer;
+}
+
+.kishor-portfolio .form-footer p {
+  margin: 0;
+
+  color:
+    var(--muted);
+
+  font-size: 0.76rem;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.kishor-portfolio .footer {
+  min-height: 130px;
+
+  padding-block: 30px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  align-items: center;
+
+  gap: 24px;
+
+  color:
+    var(--muted);
+
+  font-size: 0.76rem;
+}
+
+.kishor-portfolio .footer p {
+  text-align: center;
+}
+
+.kishor-portfolio .footer > a:last-child {
+  text-align: right;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.kishor-portfolio .reveal {
+  animation:
+    fadeUp 0.65s both;
+
+  animation-timeline:
+    view();
+
+  animation-range:
+    entry 5% cover 25%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0.25;
+
+    transform:
+      translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+  .kishor-portfolio {
+    scroll-behavior: auto;
+  }
+
+  .kishor-portfolio *,
+.kishor-portfolio *::before,
+.kishor-portfolio *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+
+  .kishor-portfolio .reveal {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (
+  max-width: 1100px
+) {
+  .kishor-portfolio .desktop-nav {
+    display: none;
+  }
+
+  .kishor-portfolio .mobile-header {
+    display: flex;
+  }
+
+  .kishor-portfolio .mobile-drawer {
+    display: grid;
+
+    position: fixed;
+
+    inset:
+      72px 0 0;
+
+    z-index: 45;
+
+    background:
+      var(--bg);
+
+    padding:
+      40px 24px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+      translateY(-8px);
+
+    transition:
+      0.22s ease;
+  }
+
+  .kishor-portfolio .mobile-drawer.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+      translateY(0);
+  }
+
+  .kishor-portfolio .mobile-drawer nav {
+    display: grid;
+
+    align-content: start;
+  }
+
+  .kishor-portfolio .mobile-drawer a {
+    display: grid;
+
+    grid-template-columns:
+      54px 1fr;
+
+    align-items: center;
+
+    padding:
+      18px 0;
+
+    border-bottom:
+      1px solid
+      var(--line);
+
+    font-size:
+      clamp(
+        1.8rem,
+        7vw,
+        3rem
+      );
+
+    letter-spacing:
+      -0.04em;
+  }
+
+  .kishor-portfolio .mobile-drawer a span {
+    color:
+      var(--accent);
+
+    font-size:
+      0.72rem;
+
+    letter-spacing:
+      0.1em;
+
+    font-weight:
+      800;
+  }
+
+  .kishor-portfolio .section-shell {
+    width:
+      min(
+        calc(
+          100% - 40px
+        ),
+        var(--max)
+      );
+  }
+
+  .kishor-portfolio .hero {
+    padding-top: 105px;
+
+    grid-template-columns:
+      0.82fr 1.18fr;
+
+    gap: 48px;
+  }
+
+  .kishor-portfolio .portrait-frame {
+    min-height: 610px;
+  }
+
+  .kishor-portfolio .hero-copy {
+    padding-right: 0;
+  }
+
+  .kishor-portfolio .hero-copy h1 {
+    font-size:
+      clamp(
+        4rem,
+        9vw,
+        7rem
+      );
+  }
+
+  .kishor-portfolio .heading-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 28px;
+  }
+
+  .kishor-portfolio .profile-grid {
+    gap: 42px;
+  }
+
+  .kishor-portfolio .expertise-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .kishor-portfolio .expertise-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .kishor-portfolio .expertise-card:nth-child(-n + 2) {
+    border-bottom:
+      1px solid
+      var(--line);
+  }
+
+  .kishor-portfolio .credentials-grid {
+    gap: 50px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 760px
+) {
+  .kishor-portfolio .section-shell {
+    width:
+      min(
+        calc(
+          100% - 32px
+        ),
+        var(--max)
+      );
+  }
+
+  .kishor-portfolio .content-section {
+    padding-block:
+      86px;
+  }
+
+  .kishor-portfolio .section-tint {
+    padding-inline:
+      16px;
+  }
+
+  .kishor-portfolio .section-heading {
+    margin-bottom:
+      48px;
+  }
+
+  .kishor-portfolio .heading-grid h2 {
+    font-size:
+      clamp(
+        2.55rem,
+        12vw,
+        4.4rem
+      );
+  }
+
+  .kishor-portfolio .heading-grid > p {
+    font-size:
+      0.95rem;
+  }
+
+  .kishor-portfolio .hero {
+    display: block;
+
+    min-height: auto;
+
+    padding-top: 96px;
+    padding-bottom: 74px;
+  }
+
+  .kishor-portfolio .portrait-frame {
+    min-height: 430px;
+
+    max-height: 520px;
+
+    border-radius:
+      8px 38px 8px 8px;
+  }
+
+  .kishor-portfolio .portrait-photo {
+    object-position:
+      center 22%;
+  }
+
+  .kishor-portfolio .portrait-monogram {
+    width: 190px;
+
+    font-size:
+      5rem;
+  }
+
+  .kishor-portfolio .hero-copy {
+    padding-top:
+      42px;
+  }
+
+  .kishor-portfolio .hero-copy h1 {
+    margin-top:
+      16px;
+
+    font-size:
+      clamp(
+        4.2rem,
+        22vw,
+        6.5rem
+      );
+  }
+
+  .kishor-portfolio .hero-role {
+    font-size:
+      1.35rem;
+  }
+
+  .kishor-portfolio .hero-intro {
+    font-size:
+      0.96rem;
+  }
+
+  .kishor-portfolio .hero-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .kishor-portfolio .button {
+    width: 100%;
+
+    justify-content:
+      space-between;
+  }
+
+  .kishor-portfolio .scroll-cue {
+    display: none;
+  }
+
+  .kishor-portfolio .profile-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 48px;
+  }
+
+  .kishor-portfolio .profile-facts div {
+    grid-template-columns:
+      95px 1fr;
+  }
+
+  .kishor-portfolio .stats-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .kishor-portfolio .stat {
+    min-height: 155px;
+
+    padding: 22px;
+  }
+
+  .kishor-portfolio .subheading {
+    grid-template-columns:
+      1fr;
+
+    gap: 14px;
+  }
+
+  .kishor-portfolio .expertise-block {
+    margin-top:
+      86px;
+  }
+
+  .kishor-portfolio .expertise-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .kishor-portfolio .expertise-card {
+    min-height: auto;
+
+    border-right:
+      0 !important;
+
+    border-bottom:
+      1px solid
+      var(--line) !important;
+  }
+
+  .kishor-portfolio .expertise-card:last-child {
+    border-bottom:
+      0 !important;
+  }
+
+  .kishor-portfolio .expertise-card h4 {
+    margin-top:
+      26px;
+  }
+
+  .kishor-portfolio .timeline-item {
+    grid-template-columns:
+      1fr;
+
+    gap: 10px;
+
+    padding:
+      34px 0;
+  }
+
+  .kishor-portfolio .timeline-main h3 {
+    font-size:
+      1.65rem;
+  }
+
+  .kishor-portfolio .compact-role {
+    grid-template-columns:
+      82px 1fr;
+
+    gap:
+      10px 16px;
+  }
+
+  .kishor-portfolio .compact-role p {
+    grid-column: 2;
+  }
+
+  .kishor-portfolio .credentials-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 72px;
+
+    margin-top:
+      90px;
+  }
+
+  .kishor-portfolio .projects-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .kishor-portfolio .project-visual {
+    height: 300px;
+  }
+
+  .kishor-portfolio .project-body {
+    padding: 24px;
+  }
+
+  .kishor-portfolio .project-body > p:not(
+    .project-type,
+    .project-outcome
+  ) {
+    min-height: auto;
+  }
+
+  .kishor-portfolio .contact-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 52px;
+  }
+
+  .kishor-portfolio .field-row {
+    grid-template-columns:
+      1fr;
+  }
+
+  .kishor-portfolio .footer {
+    grid-template-columns:
+      1fr;
+
+    padding-block:
+      42px;
+  }
+
+  .kishor-portfolio .footer p,
+.kishor-portfolio .footer > a:last-child {
+    text-align: left;
+
+    margin: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 420px
+) {
+  .kishor-portfolio .portrait-frame {
+    min-height:
+      390px;
+  }
+
+  .kishor-portfolio .portrait-monogram {
+    width:
+      165px;
+
+    font-size:
+      4.3rem;
+  }
+
+  .kishor-portfolio .portrait-caption {
+    left: 18px;
+    right: 18px;
+
+    font-size:
+      0.64rem;
+  }
+
+  .kishor-portfolio .stats-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .kishor-portfolio .stat {
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      var(--line) !important;
+  }
+
+  .kishor-portfolio .stat:last-child {
+    border-bottom:
+      0 !important;
+  }
+
+  .kishor-portfolio .project-visual {
+    height:
+      270px;
+  }
+
+  /* Existing visuals */
+
+  .kishor-portfolio .phone-shell {
+    transform:
+      translate(-52%, -50%)
+      rotate(-5deg)
+      scale(0.84);
+  }
+
+  .kishor-portfolio .metric-card {
+    right: 4%;
+
+    transform:
+      rotate(4deg)
+      scale(0.85);
+  }
+
+  .kishor-portfolio .pos-panel {
+    right: 3%;
+
+    transform:
+      rotate(3deg)
+      scale(0.85);
+
+    transform-origin:
+      right center;
+  }
+
+  .kishor-portfolio .receipt {
+    left: 7%;
+
+    transform:
+      rotate(-4deg)
+      scale(0.86);
+
+    transform-origin:
+      left center;
+  }
+
+  /* Digital Menu */
+
+  .kishor-portfolio .menu-order-panel {
+    left: 6%;
+
+    transform:
+      rotate(-4deg)
+      scale(0.84);
+
+    transform-origin:
+      left center;
+  }
+
+  .kishor-portfolio .kitchen-ticket {
+    right: 2%;
+
+    transform:
+      rotate(3deg)
+      scale(0.78);
+
+    transform-origin:
+      right center;
+  }
+
+  /* Studio */
+
+  .kishor-portfolio .studio-window {
+    left: 6%;
+    width: 78%;
+  }
+
+  .kishor-portfolio .studio-floating-card {
+    right: 2%;
+
+    transform:
+      rotate(4deg)
+      scale(0.8);
+
+    transform-origin:
+      right bottom;
+  }
+
+  /* NetStore */
+
+  .kishor-portfolio .store-sidebar {
+    left: 6%;
+  }
+
+  .kishor-portfolio .store-dashboard {
+    left:
+      calc(6% + 52px);
+
+    right: 14%;
+  }
+
+  .kishor-portfolio .store-preview {
+    right: 2%;
+
+    transform:
+      rotate(3deg)
+      scale(0.78);
+
+    transform-origin:
+      right center;
+  }
+
+  /* NEGO Card */
+
+  .kishor-portfolio .digital-card {
+    left: 6%;
+
+    width: 70%;
+
+    transform:
+      rotate(-3deg)
+      scale(0.86);
+
+    transform-origin:
+      left center;
+  }
+
+  .kishor-portfolio .card-actions {
+    left: 7%;
+  }
+
+  .kishor-portfolio .card-qr {
+    right: 2%;
+
+    transform:
+      rotate(4deg)
+      scale(0.76);
+
+    transform-origin:
+      right top;
+  }
+}

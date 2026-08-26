@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./portfolio/kishoreugin/portfolio.css";
 
 export const metadata: Metadata = {
   title: "Neuron Innovations | Digital Products & IT Solutions",

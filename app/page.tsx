@@ -55,7 +55,7 @@ function SparkIcon() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="neuron-home">
       <header className="site-header shell">
         <a className="brand" href="#top" aria-label="Neuron Innovations home">
           <img
